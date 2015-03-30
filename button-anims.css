@@ -18,15 +18,6 @@
     opacity: 1;
   }
 }
-a,
-button {
-  position: relative;
-  font-size: 1em;
-  cursor: pointer;
-  text-decoration: none;
-  color: #ffffff;
-  border: 0;
-}
 a:hover,
 button:hover {
   text-decoration: underline;
@@ -45,10 +36,15 @@ button.btn {
   transition: all 0.2s ease;
   border-radius: 3px;
   overflow: hidden;
-  color: #ffffff;
   display: inline-block;
   padding: 0.6em;
+  position: relative;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
   background-color: #333333;
+  color: #ffffff;
+  border: 0;
 }
 a.btn:hover,
 button.btn:hover,
@@ -81,7 +77,6 @@ button.btn-download:after {
   right: 0.6em;
   top: 0.6em;
   display: inline-block;
-  font-family: 'Lato', sans-serif;
   font-size: 1em;
   color: #333333;
 }
@@ -131,7 +126,6 @@ button.btn-external:after {
   right: 0.6em;
   top: 0.6em;
   display: inline-block;
-  font-family: 'Lato', sans-serif;
   font-size: 1em;
   color: #333333;
 }
@@ -180,7 +174,6 @@ button.btn-submit:after {
   right: 0.6em;
   top: 0.6em;
   display: inline-block;
-  font-family: 'Lato', sans-serif;
   font-size: 1em;
   color: #333333;
 }
@@ -234,7 +227,6 @@ button.btn-code:after {
   right: 0.6em;
   top: 0.6em;
   display: inline-block;
-  font-family: 'Lato', sans-serif;
   font-size: 1em;
   color: #333333;
 }
