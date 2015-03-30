@@ -1,3 +1,7 @@
+@bg-color: #333;
+@bg-color-focus: darken(@bg-color, 20%);
+@color: #fff;
+
 .transition(@transition) {
     -webkit-transition:     @transition;
     -moz-transition:        @transition;
@@ -44,16 +48,16 @@
     .transition(all 0.2s ease);
     border-radius: 3px;
     overflow: hidden;
-    color: #fff;
+    color: @color;
     display: inline-block;
     padding: 0.6em;
-    background-color: #333;
+    background-color: @bg-color;
 
     &:hover,
     &:focus {
         outline: none;
         text-decoration: none;
-        background-color: #000;
+        background-color: @bg-color-focus;
     }
 }
 
@@ -69,7 +73,7 @@
         display: inline-block;
         font-family: 'Lato', sans-serif;
         font-size: 1em;
-        color: #ccc;
+        color: @bg-color;
     }
 
     &:before {
@@ -80,7 +84,7 @@
     &:focus {
         &:before,
         &:after {
-            color: #fff;
+            color: @color;
         }
     }
 }
@@ -174,7 +178,7 @@ button {
     font-size: 1em;
     cursor: pointer;
     text-decoration: none;
-    color: @feature-dark;
+    color: @color;
     border: 0;
 
     &:hover {
@@ -183,7 +187,7 @@ button {
 
     &:focus {
         text-decoration: underline;
-        outline: 1px solid @feature-light;
+        outline: 1px solid @bg-color;
     }
 
     &.btn {
