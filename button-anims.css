@@ -37,7 +37,7 @@ button.btn {
   border-radius: 3px;
   overflow: hidden;
   display: inline-block;
-  padding: 0.6em;
+  padding: 1em;
   position: relative;
   font-size: 1em;
   cursor: pointer;
@@ -62,7 +62,7 @@ button.btn-block {
 }
 a.btn-download,
 button.btn-download {
-  padding: 0.6em 2em;
+  padding: 1em 2em;
 }
 a.btn-download:before,
 button.btn-download:before,
@@ -74,8 +74,8 @@ button.btn-download:after {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   position: absolute;
-  right: 0.6em;
-  top: 0.6em;
+  right: 1em;
+  top: 1em;
   display: inline-block;
   font-size: 1em;
   color: #333333;
@@ -111,7 +111,7 @@ button.btn-download:focus:after {
 }
 a.btn-external,
 button.btn-external {
-  padding: 0.6em 2em;
+  padding: 1em 2em;
 }
 a.btn-external:before,
 button.btn-external:before,
@@ -123,8 +123,8 @@ button.btn-external:after {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   position: absolute;
-  right: 0.6em;
-  top: 0.6em;
+  right: 1em;
+  top: 1em;
   display: inline-block;
   font-size: 1em;
   color: #333333;
@@ -159,7 +159,7 @@ button.btn-external:focus:after {
 }
 a.btn-submit,
 button.btn-submit {
-  padding: 0.6em 2em;
+  padding: 1em 2em;
 }
 a.btn-submit:before,
 button.btn-submit:before,
@@ -171,8 +171,8 @@ button.btn-submit:after {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   position: absolute;
-  right: 0.6em;
-  top: 0.6em;
+  right: 1em;
+  top: 1em;
   display: inline-block;
   font-size: 1em;
   color: #333333;
@@ -212,7 +212,7 @@ button.btn-submit:focus:after {
 }
 a.btn-code,
 button.btn-code {
-  padding: 0.6em 2em;
+  padding: 1em 2em;
 }
 a.btn-code:before,
 button.btn-code:before,
@@ -224,8 +224,8 @@ button.btn-code:after {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   position: absolute;
-  right: 0.6em;
-  top: 0.6em;
+  right: 1em;
+  top: 1em;
   display: inline-block;
   font-size: 1em;
   color: #333333;

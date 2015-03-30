@@ -3,6 +3,8 @@
 @bg-color: #333;
 @bg-color-focus: darken(@bg-color, 20%);
 @color: #fff;
+@padding: 1em;
+@font-size: 1em;
 
 // Generic mixins
 
@@ -43,9 +45,9 @@
     overflow: hidden;
     color: @color;
     display: inline-block;
-    padding: 0.6em;
+    padding: @padding;
     position: relative;
-    font-size: 1em;
+    font-size: @font-size;
     cursor: pointer;
     text-decoration: none;
     background-color: @bg-color;
@@ -61,21 +63,21 @@
 }
 
 .button-icon() {
-    padding: 0.6em 2em;
+    padding: @padding @padding*2;
 
     &:before,
     &:after {
         .transition(all 0.2s ease);
         position: absolute;
-        right: 0.6em;
-        top: 0.6em;
+        right: @padding;
+        top: @padding;
         display: inline-block;
-        font-size: 1em;
+        font-size: @font-size;
         color: @bg-color;
     }
 
     &:before {
-        right: 1em;
+        right: @padding;
     }
 
     &:hover,
