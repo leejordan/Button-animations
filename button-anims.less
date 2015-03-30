@@ -167,3 +167,48 @@
         }
     }
 }
+
+a,
+button {
+    position: relative;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    color: @feature-dark;
+    border: 0;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:focus {
+        text-decoration: underline;
+        outline: 1px solid @feature-light;
+    }
+
+    &.btn {
+        .button-style();
+    }
+
+    &.btn-block {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    &.btn-download {
+        .button-download();
+    }
+
+    &.btn-external {
+        .button-external();
+    }
+
+    &.btn-submit {
+        .button-submit();
+    }
+
+    &.btn-code {
+        .button-code();
+    }
+}
