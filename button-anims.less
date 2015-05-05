@@ -1,10 +1,9 @@
 // variables
-
 @bg-color: #333;
 @bg-color-focus: darken(@bg-color, 20%);
 @color: #fff;
-@padding: 1em;
 @font-size: 1em;
+@font-family: helvetica, sans-serif;
 
 // Generic mixins
 
@@ -50,8 +49,9 @@
     overflow: hidden;
     color: @color;
     display: inline-block;
-    padding: @padding @padding*2;
+    padding: @font-size/1.5 @font-size*2;
     position: relative;
+    font-family: @font-family;
     font-size: @font-size;
     cursor: pointer;
     text-decoration: none;
@@ -68,22 +68,19 @@
 }
 
 .button-icon() {
-    padding: @padding @padding*2;
-
     &:before,
     &:after {
+        .backface-visiblity();
         .transition(all 0.4s ease);
         position: absolute;
-        right: @padding/2;
-        top: @padding;
+        right: @font-size*0.75;
         display: inline-block;
-        font-size: @font-size;
         color: @bg-color;
     }
 
     &:before {
         right: auto;
-        left: @padding/2;
+        left: @font-size/4;
     }
 
     &:hover,
@@ -105,6 +102,16 @@
 @keyframes blink {
     0%, 50% { opacity: 0; }
     51%, 100% { opacity: 1; }
+}
+
+@-webkit-keyframes rotate {
+    1% { .transform(rotateZ(0deg)) }
+    100% { .transform(rotateZ(360deg)) }
+}
+
+@keyframes rotate {
+    1% { .transform(rotateZ(0deg)) }
+    100% { .transform(rotateZ(360deg)) }
 }
 
 // Button specific mixins
@@ -176,12 +183,13 @@
 
     &:before {
         left: auto;
-        right: @padding;
+        right: @font-size;
+        .transform(scaleX(0.75));
         content: "\003E";
     }
 
     &:after {
-        right: @padding/2;
+        right: @font-size/2;
         .transition(none);
         content: "\005F";
     }
@@ -263,7 +271,7 @@
 
     &:after {
         content: "\2026";
-        .transform(translateX(@padding*2));
+        .transform(translateX(@font-size*2));
     }
 
     &:hover,
@@ -278,15 +286,15 @@
     .button-icon();
 
     &:before {
-        left: @padding;
+        left: @font-size;
         content: "\201C";
-        .transform(translateX(-@padding*2));
+        .transform(translateX(-@font-size*2));
     }
 
     &:after {
-        right: @padding;
+        right: @font-size;
         content: "\201D";
-        .transform(translateX(@padding*2));
+        .transform(translateX(@font-size*2));
     }
 
     &:hover,
@@ -306,7 +314,6 @@
 
     &:after {
         content: "\003F";
-        right: @padding;
         .transform(rotateZ(360deg));
     }
 
@@ -323,7 +330,7 @@
 
     &:after {
         content: "\2605";
-        font-size: 0.95em;
+        font-size: 80%;
         .transform(rotateZ(45deg));
     }
 
@@ -340,16 +347,48 @@
 
     &:after {
         content: "\26B2";
-        top: 0.3em;
-        font-size: @font-size*1.5;
+        right: @font-size/2;
+        margin-top: -@font-size/4;
+        font-size: 130%;
         .transform(rotateZ(-90deg));
-        .backface-visiblity();
     }
 
     &:hover,
     &:focus {
         &:after {
             .transform(rotateZ(-45deg));
+        }
+    }
+}
+
+.button-loading() {
+    .button-icon();
+
+    &:after {
+        content: "\2312";
+        font-size: 80%;
+    }
+
+    &:hover,
+    &:focus {
+        &:after {
+            .animation(rotate 0.5s infinite normal linear);
+        }
+    }
+}
+
+.button-loading-arrow() {
+    .button-icon();
+
+    &:after {
+        content: "\21BB";
+        .transform-origin(50%, 52%);
+    }
+
+    &:hover,
+    &:focus {
+        &:after {
+            .animation(rotate 0.5s infinite normal linear);
         }
     }
 }
@@ -369,6 +408,10 @@ button {
 
     &.btn {
         .button-style();
+    }
+
+    &.btn + .btn {
+      margin-bottom: @font-size*0.31;
     }
 
     &.btn-block {
@@ -431,5 +474,17 @@ button {
 
     &.btn-search {
         .button-search();
+    }
+
+    &.btn-loading {
+        .button-loading();
+    }
+
+    &.btn-loading-arrow {
+        .button-loading-arrow();
+    }
+
+    &.btn-loading-dots {
+        .button-loading-dots();
     }
 }

@@ -18,6 +18,38 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes rotate {
+  1% {
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -o-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    -o-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes rotate {
+  1% {
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -o-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    -o-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
 a:hover,
 button:hover {
   text-decoration: underline;
@@ -37,8 +69,9 @@ button.btn {
   border-radius: 3px;
   overflow: hidden;
   display: inline-block;
-  padding: 1em 2em;
+  padding: 0.6666666666666666em 2em;
   position: relative;
+  font-family: helvetica, sans-serif;
   font-size: 1em;
   cursor: pointer;
   text-decoration: none;
@@ -54,36 +87,36 @@ button.btn:focus {
   text-decoration: none;
   background-color: #000000;
 }
+a.btn + .btn,
+button.btn + .btn {
+  margin-bottom: 0.31em;
+}
 a.btn-block,
 button.btn-block {
   width: 100%;
   display: block;
   text-align: center;
 }
-a.btn-reply,
-button.btn-reply {
-  padding: 1em 2em;
-}
 a.btn-reply:before,
 button.btn-reply:before,
 a.btn-reply:after,
 button.btn-reply:after {
+  backface-visiblity: hidden;
+  -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   position: absolute;
-  right: 0.5em;
-  top: 1em;
+  right: 0.75em;
   display: inline-block;
-  font-size: 1em;
   color: #333333;
 }
 a.btn-reply:before,
 button.btn-reply:before {
   right: auto;
-  left: 0.5em;
+  left: 0.25em;
 }
 a.btn-reply:hover:before,
 button.btn-reply:hover:before,
@@ -114,30 +147,26 @@ button.btn-reply:focus:after {
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
 }
-a.btn-download,
-button.btn-download {
-  padding: 1em 2em;
-}
 a.btn-download:before,
 button.btn-download:before,
 a.btn-download:after,
 button.btn-download:after {
+  backface-visiblity: hidden;
+  -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   position: absolute;
-  right: 0.5em;
-  top: 1em;
+  right: 0.75em;
   display: inline-block;
-  font-size: 1em;
   color: #333333;
 }
 a.btn-download:before,
 button.btn-download:before {
   right: auto;
-  left: 0.5em;
+  left: 0.25em;
 }
 a.btn-download:hover:before,
 button.btn-download:hover:before,
@@ -164,30 +193,26 @@ button.btn-download:focus:after {
   transform: rotate(90deg);
   border-right: 1px solid #fff;
 }
-a.btn-external,
-button.btn-external {
-  padding: 1em 2em;
-}
 a.btn-external:before,
 button.btn-external:before,
 a.btn-external:after,
 button.btn-external:after {
+  backface-visiblity: hidden;
+  -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   position: absolute;
-  right: 0.5em;
-  top: 1em;
+  right: 0.75em;
   display: inline-block;
-  font-size: 1em;
   color: #333333;
 }
 a.btn-external:before,
 button.btn-external:before {
   right: auto;
-  left: 0.5em;
+  left: 0.25em;
 }
 a.btn-external:hover:before,
 button.btn-external:hover:before,
@@ -213,30 +238,26 @@ button.btn-external:focus:after {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-a.btn-submit,
-button.btn-submit {
-  padding: 1em 2em;
-}
 a.btn-submit:before,
 button.btn-submit:before,
 a.btn-submit:after,
 button.btn-submit:after {
+  backface-visiblity: hidden;
+  -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   position: absolute;
-  right: 0.5em;
-  top: 1em;
+  right: 0.75em;
   display: inline-block;
-  font-size: 1em;
   color: #333333;
 }
 a.btn-submit:before,
 button.btn-submit:before {
   right: auto;
-  left: 0.5em;
+  left: 0.25em;
 }
 a.btn-submit:hover:before,
 button.btn-submit:hover:before,
@@ -267,30 +288,26 @@ button.btn-submit:focus:after {
   -o-transform: translateX(0em) translateY(-0.1em) scale(1.4);
   transform: translateX(0em) translateY(-0.1em) scale(1.4);
 }
-a.btn-code,
-button.btn-code {
-  padding: 1em 2em;
-}
 a.btn-code:before,
 button.btn-code:before,
 a.btn-code:after,
 button.btn-code:after {
+  backface-visiblity: hidden;
+  -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   position: absolute;
-  right: 0.5em;
-  top: 1em;
+  right: 0.75em;
   display: inline-block;
-  font-size: 1em;
   color: #333333;
 }
 a.btn-code:before,
 button.btn-code:before {
   right: auto;
-  left: 0.5em;
+  left: 0.25em;
 }
 a.btn-code:hover:before,
 button.btn-code:hover:before,
@@ -306,6 +323,11 @@ a.btn-code:before,
 button.btn-code:before {
   left: auto;
   right: 1em;
+  -webkit-transform: scaleX(0.75);
+  -moz-transform: scaleX(0.75);
+  -ms-transform: scaleX(0.75);
+  -o-transform: scaleX(0.75);
+  transform: scaleX(0.75);
   content: "\003E";
 }
 a.btn-code:after,
@@ -327,30 +349,26 @@ button.btn-code:focus:after {
   -ms-animation: blink 1s infinite normal linear;
   animation: blink 1s infinite normal linear;
 }
-a.btn-tick,
-button.btn-tick {
-  padding: 1em 2em;
-}
 a.btn-tick:before,
 button.btn-tick:before,
 a.btn-tick:after,
 button.btn-tick:after {
+  backface-visiblity: hidden;
+  -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   position: absolute;
-  right: 0.5em;
-  top: 1em;
+  right: 0.75em;
   display: inline-block;
-  font-size: 1em;
   color: #333333;
 }
 a.btn-tick:before,
 button.btn-tick:before {
   right: auto;
-  left: 0.5em;
+  left: 0.25em;
 }
 a.btn-tick:hover:before,
 button.btn-tick:hover:before,
@@ -381,30 +399,26 @@ button.btn-tick:focus:after {
   -o-transform: rotatey(0deg);
   transform: rotatey(0deg);
 }
-a.btn-cross,
-button.btn-cross {
-  padding: 1em 2em;
-}
 a.btn-cross:before,
 button.btn-cross:before,
 a.btn-cross:after,
 button.btn-cross:after {
+  backface-visiblity: hidden;
+  -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   position: absolute;
-  right: 0.5em;
-  top: 1em;
+  right: 0.75em;
   display: inline-block;
-  font-size: 1em;
   color: #333333;
 }
 a.btn-cross:before,
 button.btn-cross:before {
   right: auto;
-  left: 0.5em;
+  left: 0.25em;
 }
 a.btn-cross:hover:before,
 button.btn-cross:hover:before,
@@ -435,30 +449,26 @@ button.btn-cross:focus:after {
   -o-transform: rotatey(0deg);
   transform: rotatey(0deg);
 }
-a.btn-close,
-button.btn-close {
-  padding: 1em 2em;
-}
 a.btn-close:before,
 button.btn-close:before,
 a.btn-close:after,
 button.btn-close:after {
+  backface-visiblity: hidden;
+  -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   position: absolute;
-  right: 0.5em;
-  top: 1em;
+  right: 0.75em;
   display: inline-block;
-  font-size: 1em;
   color: #333333;
 }
 a.btn-close:before,
 button.btn-close:before {
   right: auto;
-  left: 0.5em;
+  left: 0.25em;
 }
 a.btn-close:hover:before,
 button.btn-close:hover:before,
@@ -489,30 +499,26 @@ button.btn-close:focus:after {
   -o-transform: rotatex(0deg);
   transform: rotatex(0deg);
 }
-a.btn-email,
-button.btn-email {
-  padding: 1em 2em;
-}
 a.btn-email:before,
 button.btn-email:before,
 a.btn-email:after,
 button.btn-email:after {
+  backface-visiblity: hidden;
+  -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   position: absolute;
-  right: 0.5em;
-  top: 1em;
+  right: 0.75em;
   display: inline-block;
-  font-size: 1em;
   color: #333333;
 }
 a.btn-email:before,
 button.btn-email:before {
   right: auto;
-  left: 0.5em;
+  left: 0.25em;
 }
 a.btn-email:hover:before,
 button.btn-email:hover:before,
@@ -543,30 +549,26 @@ button.btn-email:focus:after {
   -o-transform: rotatez(0deg);
   transform: rotatez(0deg);
 }
-a.btn-comment,
-button.btn-comment {
-  padding: 1em 2em;
-}
 a.btn-comment:before,
 button.btn-comment:before,
 a.btn-comment:after,
 button.btn-comment:after {
+  backface-visiblity: hidden;
+  -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   position: absolute;
-  right: 0.5em;
-  top: 1em;
+  right: 0.75em;
   display: inline-block;
-  font-size: 1em;
   color: #333333;
 }
 a.btn-comment:before,
 button.btn-comment:before {
   right: auto;
-  left: 0.5em;
+  left: 0.25em;
 }
 a.btn-comment:hover:before,
 button.btn-comment:hover:before,
@@ -597,30 +599,26 @@ button.btn-comment:focus:after {
   -o-transform: translateX(0);
   transform: translateX(0);
 }
-a.btn-quote,
-button.btn-quote {
-  padding: 1em 2em;
-}
 a.btn-quote:before,
 button.btn-quote:before,
 a.btn-quote:after,
 button.btn-quote:after {
+  backface-visiblity: hidden;
+  -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   position: absolute;
-  right: 0.5em;
-  top: 1em;
+  right: 0.75em;
   display: inline-block;
-  font-size: 1em;
   color: #333333;
 }
 a.btn-quote:before,
 button.btn-quote:before {
   right: auto;
-  left: 0.5em;
+  left: 0.25em;
 }
 a.btn-quote:hover:before,
 button.btn-quote:hover:before,
@@ -672,30 +670,26 @@ button.btn-quote:focus:after {
   -o-transform: translateX(0);
   transform: translateX(0);
 }
-a.btn-question,
-button.btn-question {
-  padding: 1em 2em;
-}
 a.btn-question:before,
 button.btn-question:before,
 a.btn-question:after,
 button.btn-question:after {
+  backface-visiblity: hidden;
+  -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   position: absolute;
-  right: 0.5em;
-  top: 1em;
+  right: 0.75em;
   display: inline-block;
-  font-size: 1em;
   color: #333333;
 }
 a.btn-question:before,
 button.btn-question:before {
   right: auto;
-  left: 0.5em;
+  left: 0.25em;
 }
 a.btn-question:hover:before,
 button.btn-question:hover:before,
@@ -710,7 +704,6 @@ button.btn-question:focus:after {
 a.btn-question:after,
 button.btn-question:after {
   content: "\003F";
-  right: 1em;
   -webkit-transform: rotateZ(360deg);
   -moz-transform: rotateZ(360deg);
   -ms-transform: rotateZ(360deg);
@@ -727,30 +720,26 @@ button.btn-question:focus:after {
   -o-transform: rotateZ(0deg);
   transform: rotateZ(0deg);
 }
-a.btn-star,
-button.btn-star {
-  padding: 1em 2em;
-}
 a.btn-star:before,
 button.btn-star:before,
 a.btn-star:after,
 button.btn-star:after {
+  backface-visiblity: hidden;
+  -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   position: absolute;
-  right: 0.5em;
-  top: 1em;
+  right: 0.75em;
   display: inline-block;
-  font-size: 1em;
   color: #333333;
 }
 a.btn-star:before,
 button.btn-star:before {
   right: auto;
-  left: 0.5em;
+  left: 0.25em;
 }
 a.btn-star:hover:before,
 button.btn-star:hover:before,
@@ -765,7 +754,7 @@ button.btn-star:focus:after {
 a.btn-star:after,
 button.btn-star:after {
   content: "\2605";
-  font-size: 0.95em;
+  font-size: 80%;
   -webkit-transform: rotateZ(45deg);
   -moz-transform: rotateZ(45deg);
   -ms-transform: rotateZ(45deg);
@@ -782,30 +771,26 @@ button.btn-star:focus:after {
   -o-transform: rotateZ(0);
   transform: rotateZ(0);
 }
-a.btn-search,
-button.btn-search {
-  padding: 1em 2em;
-}
 a.btn-search:before,
 button.btn-search:before,
 a.btn-search:after,
 button.btn-search:after {
+  backface-visiblity: hidden;
+  -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   position: absolute;
-  right: 0.5em;
-  top: 1em;
+  right: 0.75em;
   display: inline-block;
-  font-size: 1em;
   color: #333333;
 }
 a.btn-search:before,
 button.btn-search:before {
   right: auto;
-  left: 0.5em;
+  left: 0.25em;
 }
 a.btn-search:hover:before,
 button.btn-search:hover:before,
@@ -820,15 +805,14 @@ button.btn-search:focus:after {
 a.btn-search:after,
 button.btn-search:after {
   content: "\26B2";
-  top: 0.3em;
-  font-size: 1.5em;
+  right: 0.5em;
+  margin-top: -0.25em;
+  font-size: 130%;
   -webkit-transform: rotateZ(-90deg);
   -moz-transform: rotateZ(-90deg);
   -ms-transform: rotateZ(-90deg);
   -o-transform: rotateZ(-90deg);
   transform: rotateZ(-90deg);
-  backface-visiblity: hidden;
-  -webkit-backface-visibility: hidden;
 }
 a.btn-search:hover:after,
 button.btn-search:hover:after,
@@ -839,4 +823,147 @@ button.btn-search:focus:after {
   -ms-transform: rotateZ(-45deg);
   -o-transform: rotateZ(-45deg);
   transform: rotateZ(-45deg);
+}
+a.btn-loading:before,
+button.btn-loading:before,
+a.btn-loading:after,
+button.btn-loading:after {
+  backface-visiblity: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  position: absolute;
+  right: 0.75em;
+  display: inline-block;
+  color: #333333;
+}
+a.btn-loading:before,
+button.btn-loading:before {
+  right: auto;
+  left: 0.25em;
+}
+a.btn-loading:hover:before,
+button.btn-loading:hover:before,
+a.btn-loading:focus:before,
+button.btn-loading:focus:before,
+a.btn-loading:hover:after,
+button.btn-loading:hover:after,
+a.btn-loading:focus:after,
+button.btn-loading:focus:after {
+  color: #ffffff;
+}
+a.btn-loading:after,
+button.btn-loading:after {
+  content: "\2312";
+  font-size: 80%;
+}
+a.btn-loading:hover:after,
+button.btn-loading:hover:after,
+a.btn-loading:focus:after,
+button.btn-loading:focus:after {
+  -webkit-animation: rotate 0.5s infinite normal linear;
+  -moz-animation: rotate 0.5s infinite normal linear;
+  -ms-animation: rotate 0.5s infinite normal linear;
+  animation: rotate 0.5s infinite normal linear;
+}
+a.btn-loading-arrow:before,
+button.btn-loading-arrow:before,
+a.btn-loading-arrow:after,
+button.btn-loading-arrow:after {
+  backface-visiblity: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  position: absolute;
+  right: 0.75em;
+  display: inline-block;
+  color: #333333;
+}
+a.btn-loading-arrow:before,
+button.btn-loading-arrow:before {
+  right: auto;
+  left: 0.25em;
+}
+a.btn-loading-arrow:hover:before,
+button.btn-loading-arrow:hover:before,
+a.btn-loading-arrow:focus:before,
+button.btn-loading-arrow:focus:before,
+a.btn-loading-arrow:hover:after,
+button.btn-loading-arrow:hover:after,
+a.btn-loading-arrow:focus:after,
+button.btn-loading-arrow:focus:after {
+  color: #ffffff;
+}
+a.btn-loading-arrow:after,
+button.btn-loading-arrow:after {
+  content: "\21BB";
+  -webkit-transform-origin: 50% 52%;
+  -moz-transform-origin: 50% 52%;
+  -ms-transform-origin: 50% 52%;
+  -o-transform-origin: 50% 52%;
+  transform-origin: 50% 52%;
+}
+a.btn-loading-arrow:hover:after,
+button.btn-loading-arrow:hover:after,
+a.btn-loading-arrow:focus:after,
+button.btn-loading-arrow:focus:after {
+  -webkit-animation: rotate 0.5s infinite normal linear;
+  -moz-animation: rotate 0.5s infinite normal linear;
+  -ms-animation: rotate 0.5s infinite normal linear;
+  animation: rotate 0.5s infinite normal linear;
+}
+a.btn-loading-dots:before,
+button.btn-loading-dots:before,
+a.btn-loading-dots:after,
+button.btn-loading-dots:after {
+  backface-visiblity: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  position: absolute;
+  right: 0.75em;
+  display: inline-block;
+  color: #333333;
+}
+a.btn-loading-dots:before,
+button.btn-loading-dots:before {
+  right: auto;
+  left: 0.25em;
+}
+a.btn-loading-dots:hover:before,
+button.btn-loading-dots:hover:before,
+a.btn-loading-dots:focus:before,
+button.btn-loading-dots:focus:before,
+a.btn-loading-dots:hover:after,
+button.btn-loading-dots:hover:after,
+a.btn-loading-dots:focus:after,
+button.btn-loading-dots:focus:after {
+  color: #ffffff;
+}
+a.btn-loading-dots:after,
+button.btn-loading-dots:after {
+  content: "\22EF";
+  -webkit-transform-origin: 50% 52%;
+  -moz-transform-origin: 50% 52%;
+  -ms-transform-origin: 50% 52%;
+  -o-transform-origin: 50% 52%;
+  transform-origin: 50% 52%;
+}
+a.btn-loading-dots:hover:after,
+button.btn-loading-dots:hover:after,
+a.btn-loading-dots:focus:after,
+button.btn-loading-dots:focus:after {
+  -webkit-animation: rotate 0.5s infinite normal linear;
+  -moz-animation: rotate 0.5s infinite normal linear;
+  -ms-animation: rotate 0.5s infinite normal linear;
+  animation: rotate 0.5s infinite normal linear;
 }
