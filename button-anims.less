@@ -1,7 +1,7 @@
 // variables
 @bg-color: #333;
 @bg-color-focus: darken(@bg-color, 20%);
-@color: #fff;
+@text-color: #fff;
 @font-size: 1em;
 @font-family: helvetica, sans-serif;
 
@@ -47,7 +47,7 @@
     .transition(all 0.2s ease);
     border-radius: 3px;
     overflow: hidden;
-    color: @color;
+    color: @text-color;
     display: inline-block;
     padding: @font-size/1.5 @font-size*2;
     position: relative;
@@ -56,7 +56,7 @@
     cursor: pointer;
     text-decoration: none;
     background-color: @bg-color;
-    color: @color;
+    color: @text-color;
     border: 0;
 
     &:hover,
@@ -87,7 +87,7 @@
     &:focus {
         &:before,
         &:after {
-            color: @color;
+            color: @text-color;
         }
     }
 }
@@ -114,7 +114,25 @@
     100% { .transform(rotateZ(360deg)) }
 }
 
+
 // Button specific mixins
+.button-download() {
+    .button-icon();
+
+    &:after {
+        content: "\2192";
+        font-size: 85%;
+    }
+
+    &:hover,
+    &:focus {
+        &:after {
+            .transform(rotate(90deg));
+            border-right: 1px solid #fff;
+        }
+    }
+}
+
 .button-reply() {
     .button-icon();
 
@@ -127,22 +145,6 @@
     &:focus {
         &:after {
             .transform(rotate(0deg));
-        }
-    }
-}
-
-.button-download() {
-    .button-icon();
-
-    &:after {
-        content: "\2192";
-    }
-
-    &:hover,
-    &:focus {
-        &:after {
-            .transform(rotate(90deg));
-            border-right: 1px solid #fff;
         }
     }
 }
@@ -167,13 +169,13 @@
 
     &:after {
         content: "\00BB";
-        .transform(translateX(-0.2em) translateY(-0.1em) scale(1.4));
+        .transform(translateX(-0.2em) scale(1.4));
     }
 
     &:hover,
     &:focus {
         &:after {
-            .transform(translateX(0em) translateY(-0.1em) scale(1.4));
+            .transform(translateX(0em) scale(1.4));
         }
     }
 }
@@ -192,13 +194,7 @@
         right: @font-size/2;
         .transition(none);
         content: "\005F";
-    }
-
-    &:hover,
-    &:focus {
-        &:after {
-            .animation(blink 1s infinite normal linear);
-        }
+        .animation(blink 1s infinite normal linear);
     }
 }
 
@@ -325,6 +321,23 @@
     }
 }
 
+.button-star-empty() {
+    .button-icon();
+
+    &:after {
+        content: "\2606";
+        font-size: 80%;
+        .transform(rotateZ(45deg));
+    }
+
+    &:hover,
+    &:focus {
+        &:after {
+            .transform(rotateZ(0));
+        }
+    }
+}
+
 .button-star() {
     .button-icon();
 
@@ -367,13 +380,7 @@
     &:after {
         content: "\2312";
         font-size: 80%;
-    }
-
-    &:hover,
-    &:focus {
-        &:after {
-            .animation(rotate 0.5s infinite normal linear);
-        }
+        .animation(rotate 0.5s infinite normal linear);
     }
 }
 
@@ -383,13 +390,7 @@
     &:after {
         content: "\21BB";
         .transform-origin(50%, 52%);
-    }
-
-    &:hover,
-    &:focus {
-        &:after {
-            .animation(rotate 0.5s infinite normal linear);
-        }
+        .animation(rotate 0.5s infinite normal linear);
     }
 }
 
@@ -418,6 +419,14 @@ button {
         width: 100%;
         display: block;
         text-align: center;
+    }
+
+    &.btn-active {
+        &:before,
+        &:after {
+            color: @text-color !important;
+            .transform(none) !important;
+        }
     }
 
     &.btn-reply {
@@ -468,6 +477,10 @@ button {
         .button-question();
     }
 
+    &.btn-star-empty {
+        .button-star-empty();
+    }
+
     &.btn-star {
         .button-star();
     }
@@ -482,9 +495,5 @@ button {
 
     &.btn-loading-arrow {
         .button-loading-arrow();
-    }
-
-    &.btn-loading-dots {
-        .button-loading-dots();
     }
 }

@@ -97,6 +97,17 @@ button.btn-block {
   display: block;
   text-align: center;
 }
+a.btn-active:before,
+button.btn-active:before,
+a.btn-active:after,
+button.btn-active:after {
+  color: #ffffff !important;
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -o-transform: none !important;
+  transform: none !important;
+}
 a.btn-reply:before,
 button.btn-reply:before,
 a.btn-reply:after,
@@ -181,6 +192,7 @@ button.btn-download:focus:after {
 a.btn-download:after,
 button.btn-download:after {
   content: "\2192";
+  font-size: 85%;
 }
 a.btn-download:hover:after,
 button.btn-download:hover:after,
@@ -272,21 +284,21 @@ button.btn-submit:focus:after {
 a.btn-submit:after,
 button.btn-submit:after {
   content: "\00BB";
-  -webkit-transform: translateX(-0.2em) translateY(-0.1em) scale(1.4);
-  -moz-transform: translateX(-0.2em) translateY(-0.1em) scale(1.4);
-  -ms-transform: translateX(-0.2em) translateY(-0.1em) scale(1.4);
-  -o-transform: translateX(-0.2em) translateY(-0.1em) scale(1.4);
-  transform: translateX(-0.2em) translateY(-0.1em) scale(1.4);
+  -webkit-transform: translateX(-0.2em) scale(1.4);
+  -moz-transform: translateX(-0.2em) scale(1.4);
+  -ms-transform: translateX(-0.2em) scale(1.4);
+  -o-transform: translateX(-0.2em) scale(1.4);
+  transform: translateX(-0.2em) scale(1.4);
 }
 a.btn-submit:hover:after,
 button.btn-submit:hover:after,
 a.btn-submit:focus:after,
 button.btn-submit:focus:after {
-  -webkit-transform: translateX(0em) translateY(-0.1em) scale(1.4);
-  -moz-transform: translateX(0em) translateY(-0.1em) scale(1.4);
-  -ms-transform: translateX(0em) translateY(-0.1em) scale(1.4);
-  -o-transform: translateX(0em) translateY(-0.1em) scale(1.4);
-  transform: translateX(0em) translateY(-0.1em) scale(1.4);
+  -webkit-transform: translateX(0em) scale(1.4);
+  -moz-transform: translateX(0em) scale(1.4);
+  -ms-transform: translateX(0em) scale(1.4);
+  -o-transform: translateX(0em) scale(1.4);
+  transform: translateX(0em) scale(1.4);
 }
 a.btn-code:before,
 button.btn-code:before,
@@ -339,11 +351,6 @@ button.btn-code:after {
   -o-transition: none;
   transition: none;
   content: "\005F";
-}
-a.btn-code:hover:after,
-button.btn-code:hover:after,
-a.btn-code:focus:after,
-button.btn-code:focus:after {
   -webkit-animation: blink 1s infinite normal linear;
   -moz-animation: blink 1s infinite normal linear;
   -ms-animation: blink 1s infinite normal linear;
@@ -720,6 +727,57 @@ button.btn-question:focus:after {
   -o-transform: rotateZ(0deg);
   transform: rotateZ(0deg);
 }
+a.btn-star-empty:before,
+button.btn-star-empty:before,
+a.btn-star-empty:after,
+button.btn-star-empty:after {
+  backface-visiblity: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  position: absolute;
+  right: 0.75em;
+  display: inline-block;
+  color: #333333;
+}
+a.btn-star-empty:before,
+button.btn-star-empty:before {
+  right: auto;
+  left: 0.25em;
+}
+a.btn-star-empty:hover:before,
+button.btn-star-empty:hover:before,
+a.btn-star-empty:focus:before,
+button.btn-star-empty:focus:before,
+a.btn-star-empty:hover:after,
+button.btn-star-empty:hover:after,
+a.btn-star-empty:focus:after,
+button.btn-star-empty:focus:after {
+  color: #ffffff;
+}
+a.btn-star-empty:after,
+button.btn-star-empty:after {
+  content: "\2606";
+  font-size: 80%;
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+  -ms-transform: rotateZ(45deg);
+  -o-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+a.btn-star-empty:hover:after,
+button.btn-star-empty:hover:after,
+a.btn-star-empty:focus:after,
+button.btn-star-empty:focus:after {
+  -webkit-transform: rotateZ(0);
+  -moz-transform: rotateZ(0);
+  -ms-transform: rotateZ(0);
+  -o-transform: rotateZ(0);
+  transform: rotateZ(0);
+}
 a.btn-star:before,
 button.btn-star:before,
 a.btn-star:after,
@@ -859,11 +917,6 @@ a.btn-loading:after,
 button.btn-loading:after {
   content: "\2312";
   font-size: 80%;
-}
-a.btn-loading:hover:after,
-button.btn-loading:hover:after,
-a.btn-loading:focus:after,
-button.btn-loading:focus:after {
   -webkit-animation: rotate 0.5s infinite normal linear;
   -moz-animation: rotate 0.5s infinite normal linear;
   -ms-animation: rotate 0.5s infinite normal linear;
@@ -908,60 +961,6 @@ button.btn-loading-arrow:after {
   -ms-transform-origin: 50% 52%;
   -o-transform-origin: 50% 52%;
   transform-origin: 50% 52%;
-}
-a.btn-loading-arrow:hover:after,
-button.btn-loading-arrow:hover:after,
-a.btn-loading-arrow:focus:after,
-button.btn-loading-arrow:focus:after {
-  -webkit-animation: rotate 0.5s infinite normal linear;
-  -moz-animation: rotate 0.5s infinite normal linear;
-  -ms-animation: rotate 0.5s infinite normal linear;
-  animation: rotate 0.5s infinite normal linear;
-}
-a.btn-loading-dots:before,
-button.btn-loading-dots:before,
-a.btn-loading-dots:after,
-button.btn-loading-dots:after {
-  backface-visiblity: hidden;
-  -webkit-backface-visibility: hidden;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  position: absolute;
-  right: 0.75em;
-  display: inline-block;
-  color: #333333;
-}
-a.btn-loading-dots:before,
-button.btn-loading-dots:before {
-  right: auto;
-  left: 0.25em;
-}
-a.btn-loading-dots:hover:before,
-button.btn-loading-dots:hover:before,
-a.btn-loading-dots:focus:before,
-button.btn-loading-dots:focus:before,
-a.btn-loading-dots:hover:after,
-button.btn-loading-dots:hover:after,
-a.btn-loading-dots:focus:after,
-button.btn-loading-dots:focus:after {
-  color: #ffffff;
-}
-a.btn-loading-dots:after,
-button.btn-loading-dots:after {
-  content: "\22EF";
-  -webkit-transform-origin: 50% 52%;
-  -moz-transform-origin: 50% 52%;
-  -ms-transform-origin: 50% 52%;
-  -o-transform-origin: 50% 52%;
-  transform-origin: 50% 52%;
-}
-a.btn-loading-dots:hover:after,
-button.btn-loading-dots:hover:after,
-a.btn-loading-dots:focus:after,
-button.btn-loading-dots:focus:after {
   -webkit-animation: rotate 0.5s infinite normal linear;
   -moz-animation: rotate 0.5s infinite normal linear;
   -ms-animation: rotate 0.5s infinite normal linear;
