@@ -192,7 +192,6 @@ button.btn-download:focus:after {
 a.btn-download:after,
 button.btn-download:after {
   content: "\2192";
-  font-size: 85%;
 }
 a.btn-download:hover:after,
 button.btn-download:hover:after,
