@@ -73,6 +73,7 @@ button.btn {
   position: relative;
   font-family: helvetica, sans-serif;
   font-size: 1em;
+  line-height: 1em;
   cursor: pointer;
   text-decoration: none;
   background-color: #333333;
@@ -122,6 +123,7 @@ button.btn-reply:after {
   position: absolute;
   right: 0.75em;
   display: inline-block;
+  font-family: arial, sans-serif;
   color: #333333;
 }
 a.btn-reply:before,
@@ -172,6 +174,7 @@ button.btn-download:after {
   position: absolute;
   right: 0.75em;
   display: inline-block;
+  font-family: arial, sans-serif;
   color: #333333;
 }
 a.btn-download:before,
@@ -219,6 +222,7 @@ button.btn-external:after {
   position: absolute;
   right: 0.75em;
   display: inline-block;
+  font-family: arial, sans-serif;
   color: #333333;
 }
 a.btn-external:before,
@@ -264,6 +268,7 @@ button.btn-submit:after {
   position: absolute;
   right: 0.75em;
   display: inline-block;
+  font-family: arial, sans-serif;
   color: #333333;
 }
 a.btn-submit:before,
@@ -314,6 +319,7 @@ button.btn-code:after {
   position: absolute;
   right: 0.75em;
   display: inline-block;
+  font-family: arial, sans-serif;
   color: #333333;
 }
 a.btn-code:before,
@@ -370,6 +376,7 @@ button.btn-tick:after {
   position: absolute;
   right: 0.75em;
   display: inline-block;
+  font-family: arial, sans-serif;
   color: #333333;
 }
 a.btn-tick:before,
@@ -420,6 +427,7 @@ button.btn-cross:after {
   position: absolute;
   right: 0.75em;
   display: inline-block;
+  font-family: arial, sans-serif;
   color: #333333;
 }
 a.btn-cross:before,
@@ -470,6 +478,7 @@ button.btn-close:after {
   position: absolute;
   right: 0.75em;
   display: inline-block;
+  font-family: arial, sans-serif;
   color: #333333;
 }
 a.btn-close:before,
@@ -520,6 +529,7 @@ button.btn-email:after {
   position: absolute;
   right: 0.75em;
   display: inline-block;
+  font-family: arial, sans-serif;
   color: #333333;
 }
 a.btn-email:before,
@@ -570,6 +580,7 @@ button.btn-comment:after {
   position: absolute;
   right: 0.75em;
   display: inline-block;
+  font-family: arial, sans-serif;
   color: #333333;
 }
 a.btn-comment:before,
@@ -620,6 +631,7 @@ button.btn-quote:after {
   position: absolute;
   right: 0.75em;
   display: inline-block;
+  font-family: arial, sans-serif;
   color: #333333;
 }
 a.btn-quote:before,
@@ -691,6 +703,7 @@ button.btn-question:after {
   position: absolute;
   right: 0.75em;
   display: inline-block;
+  font-family: arial, sans-serif;
   color: #333333;
 }
 a.btn-question:before,
@@ -741,6 +754,7 @@ button.btn-star-empty:after {
   position: absolute;
   right: 0.75em;
   display: inline-block;
+  font-family: arial, sans-serif;
   color: #333333;
 }
 a.btn-star-empty:before,
@@ -792,6 +806,7 @@ button.btn-star:after {
   position: absolute;
   right: 0.75em;
   display: inline-block;
+  font-family: arial, sans-serif;
   color: #333333;
 }
 a.btn-star:before,
@@ -843,6 +858,7 @@ button.btn-search:after {
   position: absolute;
   right: 0.75em;
   display: inline-block;
+  font-family: arial, sans-serif;
   color: #333333;
 }
 a.btn-search:before,
@@ -864,7 +880,6 @@ a.btn-search:after,
 button.btn-search:after {
   content: "\26B2";
   right: 0.5em;
-  margin-top: -0.25em;
   font-size: 130%;
   -webkit-transform: rotateZ(-90deg);
   -moz-transform: rotateZ(-90deg);
@@ -896,6 +911,7 @@ button.btn-loading:after {
   position: absolute;
   right: 0.75em;
   display: inline-block;
+  font-family: arial, sans-serif;
   color: #333333;
 }
 a.btn-loading:before,
@@ -936,6 +952,7 @@ button.btn-loading-arrow:after {
   position: absolute;
   right: 0.75em;
   display: inline-block;
+  font-family: arial, sans-serif;
   color: #333333;
 }
 a.btn-loading-arrow:before,
