@@ -109,6 +109,108 @@ button.btn-active:after {
   -o-transform: none !important;
   transform: none !important;
 }
+a.btn-prev:before,
+button.btn-prev:before,
+a.btn-prev:after,
+button.btn-prev:after {
+  backface-visiblity: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  position: absolute;
+  right: 0.75em;
+  display: inline-block;
+  font-family: arial, sans-serif;
+  color: #333333;
+}
+a.btn-prev:before,
+button.btn-prev:before {
+  right: auto;
+  left: 0.75em;
+}
+a.btn-prev:hover:before,
+button.btn-prev:hover:before,
+a.btn-prev:focus:before,
+button.btn-prev:focus:before,
+a.btn-prev:hover:after,
+button.btn-prev:hover:after,
+a.btn-prev:focus:after,
+button.btn-prev:focus:after {
+  color: #ffffff;
+}
+a.btn-prev:before,
+button.btn-prev:before {
+  content: "\2190";
+  -webkit-transform: translateX(0.2em);
+  -moz-transform: translateX(0.2em);
+  -ms-transform: translateX(0.2em);
+  -o-transform: translateX(0.2em);
+  transform: translateX(0.2em);
+}
+a.btn-prev:hover:before,
+button.btn-prev:hover:before,
+a.btn-prev:focus:before,
+button.btn-prev:focus:before {
+  -webkit-transform: translateX(0em);
+  -moz-transform: translateX(0em);
+  -ms-transform: translateX(0em);
+  -o-transform: translateX(0em);
+  transform: translateX(0em);
+}
+a.btn-next:before,
+button.btn-next:before,
+a.btn-next:after,
+button.btn-next:after {
+  backface-visiblity: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  position: absolute;
+  right: 0.75em;
+  display: inline-block;
+  font-family: arial, sans-serif;
+  color: #333333;
+}
+a.btn-next:before,
+button.btn-next:before {
+  right: auto;
+  left: 0.75em;
+}
+a.btn-next:hover:before,
+button.btn-next:hover:before,
+a.btn-next:focus:before,
+button.btn-next:focus:before,
+a.btn-next:hover:after,
+button.btn-next:hover:after,
+a.btn-next:focus:after,
+button.btn-next:focus:after {
+  color: #ffffff;
+}
+a.btn-next:after,
+button.btn-next:after {
+  content: "\2192";
+  -webkit-transform: translateX(-0.2em);
+  -moz-transform: translateX(-0.2em);
+  -ms-transform: translateX(-0.2em);
+  -o-transform: translateX(-0.2em);
+  transform: translateX(-0.2em);
+}
+a.btn-next:hover:after,
+button.btn-next:hover:after,
+a.btn-next:focus:after,
+button.btn-next:focus:after {
+  -webkit-transform: translateX(0em);
+  -moz-transform: translateX(0em);
+  -ms-transform: translateX(0em);
+  -o-transform: translateX(0em);
+  transform: translateX(0em);
+}
 a.btn-reply:before,
 button.btn-reply:before,
 a.btn-reply:after,
@@ -129,7 +231,7 @@ button.btn-reply:after {
 a.btn-reply:before,
 button.btn-reply:before {
   right: auto;
-  left: 0.25em;
+  left: 0.75em;
 }
 a.btn-reply:hover:before,
 button.btn-reply:hover:before,
@@ -180,7 +282,7 @@ button.btn-download:after {
 a.btn-download:before,
 button.btn-download:before {
   right: auto;
-  left: 0.25em;
+  left: 0.75em;
 }
 a.btn-download:hover:before,
 button.btn-download:hover:before,
@@ -228,7 +330,7 @@ button.btn-external:after {
 a.btn-external:before,
 button.btn-external:before {
   right: auto;
-  left: 0.25em;
+  left: 0.75em;
 }
 a.btn-external:hover:before,
 button.btn-external:hover:before,
@@ -274,7 +376,7 @@ button.btn-submit:after {
 a.btn-submit:before,
 button.btn-submit:before {
   right: auto;
-  left: 0.25em;
+  left: 0.75em;
 }
 a.btn-submit:hover:before,
 button.btn-submit:hover:before,
@@ -325,7 +427,7 @@ button.btn-code:after {
 a.btn-code:before,
 button.btn-code:before {
   right: auto;
-  left: 0.25em;
+  left: 0.75em;
 }
 a.btn-code:hover:before,
 button.btn-code:hover:before,
@@ -382,7 +484,7 @@ button.btn-tick:after {
 a.btn-tick:before,
 button.btn-tick:before {
   right: auto;
-  left: 0.25em;
+  left: 0.75em;
 }
 a.btn-tick:hover:before,
 button.btn-tick:hover:before,
@@ -433,7 +535,7 @@ button.btn-cross:after {
 a.btn-cross:before,
 button.btn-cross:before {
   right: auto;
-  left: 0.25em;
+  left: 0.75em;
 }
 a.btn-cross:hover:before,
 button.btn-cross:hover:before,
@@ -484,7 +586,7 @@ button.btn-close:after {
 a.btn-close:before,
 button.btn-close:before {
   right: auto;
-  left: 0.25em;
+  left: 0.75em;
 }
 a.btn-close:hover:before,
 button.btn-close:hover:before,
@@ -535,7 +637,7 @@ button.btn-email:after {
 a.btn-email:before,
 button.btn-email:before {
   right: auto;
-  left: 0.25em;
+  left: 0.75em;
 }
 a.btn-email:hover:before,
 button.btn-email:hover:before,
@@ -586,7 +688,7 @@ button.btn-comment:after {
 a.btn-comment:before,
 button.btn-comment:before {
   right: auto;
-  left: 0.25em;
+  left: 0.75em;
 }
 a.btn-comment:hover:before,
 button.btn-comment:hover:before,
@@ -637,7 +739,7 @@ button.btn-quote:after {
 a.btn-quote:before,
 button.btn-quote:before {
   right: auto;
-  left: 0.25em;
+  left: 0.75em;
 }
 a.btn-quote:hover:before,
 button.btn-quote:hover:before,
@@ -709,7 +811,7 @@ button.btn-question:after {
 a.btn-question:before,
 button.btn-question:before {
   right: auto;
-  left: 0.25em;
+  left: 0.75em;
 }
 a.btn-question:hover:before,
 button.btn-question:hover:before,
@@ -760,7 +862,7 @@ button.btn-star-empty:after {
 a.btn-star-empty:before,
 button.btn-star-empty:before {
   right: auto;
-  left: 0.25em;
+  left: 0.75em;
 }
 a.btn-star-empty:hover:before,
 button.btn-star-empty:hover:before,
@@ -812,7 +914,7 @@ button.btn-star:after {
 a.btn-star:before,
 button.btn-star:before {
   right: auto;
-  left: 0.25em;
+  left: 0.75em;
 }
 a.btn-star:hover:before,
 button.btn-star:hover:before,
@@ -864,7 +966,7 @@ button.btn-search:after {
 a.btn-search:before,
 button.btn-search:before {
   right: auto;
-  left: 0.25em;
+  left: 0.75em;
 }
 a.btn-search:hover:before,
 button.btn-search:hover:before,
@@ -917,7 +1019,7 @@ button.btn-loading:after {
 a.btn-loading:before,
 button.btn-loading:before {
   right: auto;
-  left: 0.25em;
+  left: 0.75em;
 }
 a.btn-loading:hover:before,
 button.btn-loading:hover:before,
@@ -958,7 +1060,7 @@ button.btn-loading-arrow:after {
 a.btn-loading-arrow:before,
 button.btn-loading-arrow:before {
   right: auto;
-  left: 0.25em;
+  left: 0.75em;
 }
 a.btn-loading-arrow:hover:before,
 button.btn-loading-arrow:hover:before,

@@ -83,7 +83,7 @@
 
     &:before {
         right: auto;
-        left: @font-size/4;
+        left: @font-size*0.75;
     }
 
     &:hover,
@@ -119,6 +119,38 @@
 
 
 // Button specific mixins
+.button-prev() {
+    .button-icon();
+
+    &:before {
+        content: "\2190";
+        .transform(translateX(0.2em));
+    }
+
+    &:hover,
+    &:focus {
+        &:before {
+            .transform(translateX(0em));
+        }
+    }
+}
+
+.button-next() {
+    .button-icon();
+
+    &:after {
+        content: "\2192";
+        .transform(translateX(-0.2em));
+    }
+
+    &:hover,
+    &:focus {
+        &:after {
+            .transform(translateX(0em));
+        }
+    }
+}
+
 .button-download() {
     .button-icon();
 
@@ -429,6 +461,14 @@ button {
             color: @text-color !important;
             .transform(none) !important;
         }
+    }
+
+    &.btn-prev {
+        .button-prev();
+    }
+
+    &.btn-next {
+        .button-next();
     }
 
     &.btn-reply {
