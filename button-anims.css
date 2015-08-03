@@ -113,7 +113,7 @@ a.btn-prev:before,
 button.btn-prev:before,
 a.btn-prev:after,
 button.btn-prev:after {
-  backface-visiblity: hidden;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -164,7 +164,7 @@ a.btn-next:before,
 button.btn-next:before,
 a.btn-next:after,
 button.btn-next:after {
-  backface-visiblity: hidden;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -215,7 +215,7 @@ a.btn-reply:before,
 button.btn-reply:before,
 a.btn-reply:after,
 button.btn-reply:after {
-  backface-visiblity: hidden;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -266,7 +266,7 @@ a.btn-download:before,
 button.btn-download:before,
 a.btn-download:after,
 button.btn-download:after {
-  backface-visiblity: hidden;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -314,7 +314,7 @@ a.btn-external:before,
 button.btn-external:before,
 a.btn-external:after,
 button.btn-external:after {
-  backface-visiblity: hidden;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -360,7 +360,7 @@ a.btn-submit:before,
 button.btn-submit:before,
 a.btn-submit:after,
 button.btn-submit:after {
-  backface-visiblity: hidden;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -411,7 +411,7 @@ a.btn-code:before,
 button.btn-code:before,
 a.btn-code:after,
 button.btn-code:after {
-  backface-visiblity: hidden;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -468,7 +468,7 @@ a.btn-tick:before,
 button.btn-tick:before,
 a.btn-tick:after,
 button.btn-tick:after {
-  backface-visiblity: hidden;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -519,7 +519,7 @@ a.btn-cross:before,
 button.btn-cross:before,
 a.btn-cross:after,
 button.btn-cross:after {
-  backface-visiblity: hidden;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -570,7 +570,7 @@ a.btn-close:before,
 button.btn-close:before,
 a.btn-close:after,
 button.btn-close:after {
-  backface-visiblity: hidden;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -621,7 +621,7 @@ a.btn-email:before,
 button.btn-email:before,
 a.btn-email:after,
 button.btn-email:after {
-  backface-visiblity: hidden;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -672,7 +672,7 @@ a.btn-comment:before,
 button.btn-comment:before,
 a.btn-comment:after,
 button.btn-comment:after {
-  backface-visiblity: hidden;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -723,7 +723,7 @@ a.btn-quote:before,
 button.btn-quote:before,
 a.btn-quote:after,
 button.btn-quote:after {
-  backface-visiblity: hidden;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -795,7 +795,7 @@ a.btn-question:before,
 button.btn-question:before,
 a.btn-question:after,
 button.btn-question:after {
-  backface-visiblity: hidden;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -846,7 +846,7 @@ a.btn-star-empty:before,
 button.btn-star-empty:before,
 a.btn-star-empty:after,
 button.btn-star-empty:after {
-  backface-visiblity: hidden;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -898,7 +898,7 @@ a.btn-star:before,
 button.btn-star:before,
 a.btn-star:after,
 button.btn-star:after {
-  backface-visiblity: hidden;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -950,7 +950,7 @@ a.btn-search:before,
 button.btn-search:before,
 a.btn-search:after,
 button.btn-search:after {
-  backface-visiblity: hidden;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -1003,7 +1003,7 @@ a.btn-loading:before,
 button.btn-loading:before,
 a.btn-loading:after,
 button.btn-loading:after {
-  backface-visiblity: hidden;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -1044,7 +1044,7 @@ a.btn-loading-arrow:before,
 button.btn-loading-arrow:before,
 a.btn-loading-arrow:after,
 button.btn-loading-arrow:after {
-  backface-visiblity: hidden;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;

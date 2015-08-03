@@ -24,9 +24,9 @@
     transform:              @string;
 }
 
-.backface-visiblity(@visibility: hidden) {
-    backface-visiblity:         @visibility;
-    -webkit-backface-visibility:@visibility;
+.backface-visibility(@visibility: hidden) {
+    backface-visibility:            @visibility;
+    -webkit-backface-visibility:    @visibility;
 }
 
 .transform-origin(@x:center, @y:center) {
@@ -72,7 +72,7 @@
 .button-icon() {
     &:before,
     &:after {
-        .backface-visiblity();
+        .backface-visibility();
         .transition(all 0.4s ease);
         position: absolute;
         right: @font-size*0.75;
